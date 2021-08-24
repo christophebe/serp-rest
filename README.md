@@ -1,0 +1,1 @@
+http://localhost:3000/search?keyword=credit%20rapide&num=30&lr=lang_fr&cr=BE
