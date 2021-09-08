@@ -1,0 +1,7 @@
+node_modules
+logs
+proxies.txt
+.vscode
+.env
+proxies.txt
+.gitignore

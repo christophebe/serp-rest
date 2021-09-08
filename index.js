@@ -22,8 +22,11 @@ require('dotenv').config();
 
   app.get('/search', asyncHandler(async (req, res, next) => {
     try {
+      const o = options.buildOptions(req, proxyList);
       console.log(`get search : ${req.query.keyword}`);
-      const links = await serp.search(options.buildOptions(req, proxyList));
+      console.log('With options : ');
+      console.log(o);
+      const links = await serp.search(o);
       return res.send(links);
     } catch (e) {
       return next(e);

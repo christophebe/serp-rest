@@ -39,12 +39,20 @@ const buildOptions = (req, proxyLoader) => {
     options.num = req.query.num;
   }
 
+  if (req.query.scrapeApiUrl) {
+    options.scrapeApiUrl = req.query.scrapeApiUrl;
+  }
+
   if (req.query.lr) {
     options.qs.lr = req.query.lr;
   }
 
   if (req.query.cr) {
-    options.qs.lr = req.query.cr;
+    options.qs.cr = req.query.cr;
+  }
+
+  if (req.query.pws) {
+    options.qs.pws = req.query.pws;
   }
 
   return options;
